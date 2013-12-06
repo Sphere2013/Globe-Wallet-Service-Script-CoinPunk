@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-lg-7 hidden-xs hidden-sm">
+    <h1>Dashboard</h1>
+  </div>
+  
+  <div class="col-lg-5 text-center" style="height: 120px">
+    <div class="row">
+      <h2><span id="balance"></span> GLB <small style="margin-left: 10px"><span id="balanceExchange"></span></small></h2>
+      <h5><span id="pendingBalance"></span> GLB pending<small style="margin-left: 10px"><span id="pendingBalanceExchange"></span></small></h5>
+    </div>
+    <div class="row">
+      <p><span id="exchangePrice"></span></p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div id="receivedTransactions"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div id="sentTransactions"></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div id="addresses"></div>
+  </div>
+  <div class="col-lg-6">
+    <h2>New Address</h2>
+    <form onsubmit="coinpunk.controllers.dashboard.generateNewAddress($('#addressLabel').val()); return false;">
+      <div>
+        Label <small>(optional)</small>: <input id="addressLabel" type="text" style="width: 200px"> <button class="btn btn-info">Generate</button>
+        <div id="newAddressDialog" class="alert alert-success alert-dismissable hidden">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <span id="newAddressMessage"></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
